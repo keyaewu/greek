@@ -2,14 +2,71 @@
 <escenic version="2.0" xmlns="http://xmlns.escenic.com/2009/import">
     <section-page source="ece-auto-gen" sourceid="73fc0177-5f6f-44d2-b048-d79098f59f0c" unique-name="config.default.section.about" name="About WF3 page template" layout-name="config" action="remove">
         <options>
+            <field name="asideposition">
+                <value>right</value>
+            </field>
             <field name="area_split">
                 <value>12_0</value>
             </field>
         </options>
-        <area name="outer"/>
-        <area name="header"/>
-        <area name="top"/>
+        <area name="outer">
+            <options>
+                <field name="loadingpolicy">
+                    <value>onPage</value>
+                </field>
+                <field name="htmltag">
+                    <value>div</value>
+                </field>
+            </options>
+        </area>
+        <area name="header">
+            <options>
+                <field name="loadingpolicy">
+                    <value>onPage</value>
+                </field>
+                <field name="htmltag">
+                    <value>header</value>
+                </field>
+            </options>
+        </area>
+        <area name="top">
+            <options>
+                <field name="loadingpolicy">
+                    <value>onPage</value>
+                </field>
+                <field name="htmltag">
+                    <value>div</value>
+                </field>
+                <field name="showtoparea">
+                    <value>true</value>
+                </field>
+            </options>
+            <group name="row" label="Row">
+                <area name="row-area">
+                    <content-ref source="ece-auto-gen" sourceid="9dd4c288-0fe3-4d04-a7f5-43ab21971758">
+                        <field name="title">about</field>
+                    </content-ref>
+                </area>
+                <options>
+                    <field name="loadingpolicy">
+                        <value>onPage</value>
+                    </field>
+                    <field name="htmltag">
+                        <value>div</value>
+                    </field>
+                    <field name="referable">false</field>
+                </options>
+            </group>
+        </area>
         <area name="main">
+            <options>
+                <field name="loadingpolicy">
+                    <value>onPage</value>
+                </field>
+                <field name="htmltag">
+                    <value>section</value>
+                </field>
+            </options>
             <content-ref source="ece-auto-gen" sourceid="3e325c5e-ad14-472a-b630-7f952b9bde20">
                 <field name="title">Section title</field>
                 <options>
@@ -39,12 +96,43 @@
                     <field name="htmltag">
                         <value>div</value>
                     </field>
+                    <field name="referable">false</field>
                     <field name="customstyleclass">grid-cell</field>
                 </options>
             </group>
         </area>
-        <area name="aside"/>
-        <area name="bottom"/>
-        <area name="footer"/>
+        <area name="aside">
+            <options>
+                <field name="loadingpolicy">
+                    <value>onPage</value>
+                </field>
+                <field name="htmltag">
+                    <value>aside</value>
+                </field>
+            </options>
+        </area>
+        <area name="bottom">
+            <options>
+                <field name="loadingpolicy">
+                    <value>onPage</value>
+                </field>
+                <field name="htmltag">
+                    <value>div</value>
+                </field>
+                <field name="showbottomarea">
+                    <value>true</value>
+                </field>
+            </options>
+        </area>
+        <area name="footer">
+            <options>
+                <field name="loadingpolicy">
+                    <value>onPage</value>
+                </field>
+                <field name="htmltag">
+                    <value>footer</value>
+                </field>
+            </options>
+        </area>
     </section-page>
 </escenic>
